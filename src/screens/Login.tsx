@@ -20,6 +20,7 @@ import FormError from "../components/auth/FormError";
 import { gql, useMutation, useQuery } from "@apollo/client";
 import { logUserIn } from "../apollo";
 import { useLocation } from "react-router-dom";
+import { login, loginVariables } from "../__generated__/login";
 
 type FormProps = {
   username: string;
@@ -72,7 +73,7 @@ function Login() {
     }
   `;
   const { username, password } = getValues();
-  const [login, { loading, data, error, called }] = useMutation(
+  const [login, { loading }] = useMutation<login, loginVariables>(
     Login_mutation,
     {
       variables: { username, password },
@@ -80,7 +81,7 @@ function Login() {
         const {
           login: { ok, error, token },
         } = data;
-        if (!ok) {
+        if (error) {
           return setError("result", {
             message: error,
           });
@@ -111,7 +112,7 @@ function Login() {
             hasError={Boolean(errors?.username?.message)}
             placeholder="username"
           />
-          <FormError message={errors.username && errors.username.message} />
+          <FormError message={errors?.username?.message} />
           <Input
             {...register("password", {
               minLength: {
@@ -122,7 +123,7 @@ function Login() {
             hasError={Boolean(errors?.password?.message)}
             placeholder="password"
           />
-          <FormError message={errors.password && errors.password.message} />
+          <FormError message={errors?.password?.message} />
           <Button
             type="submit"
             value={loading ? "Looading..." : "Login"}

@@ -62,48 +62,45 @@ function SignUp() {
     mode: "onChange",
   });
   const history = useHistory();
-  const SignUp_mutation = gql(`
+  const SignUp_mutation = gql`
     mutation createAccount(
-     $firstName: String!
-     $lastName: String
-     $username: String!
-     $email: String!
-     $password: String!
+      $firstName: String!
+      $lastName: String
+      $username: String!
+      $email: String!
+      $password: String!
     ) {
       createAccount(
-      firstName:$firstName
-      lastName:$lastName
-      username:$username
-      email:$email
-      password:$password
+        firstName: $firstName
+        lastName: $lastName
+        username: $username
+        email: $email
+        password: $password
       ) {
         ok
         error
       }
     }
-`);
+  `;
 
-  const [createAccount, { loading, data, error, called }] = useMutation(
-    SignUp_mutation,
-    {
-      onCompleted: (data) => {
-        const { username, password } = getValues();
-        const {
-          createAccount: { ok, error },
-        } = data;
-        if (!ok) {
-          return setError("password", {
-            message: error,
-          });
-        }
-        history.push(routes.home, {
-          message: "Account created.Please Login",
-          username,
-          password,
+  const [createAccount, { loading }] = useMutation(SignUp_mutation, {
+    onCompleted: (data) => {
+      const { username, password } = getValues();
+      const {
+        createAccount: { ok, error },
+      } = data;
+      if (!ok) {
+        return setError("result", {
+          message: error,
         });
-      },
-    }
-  );
+      }
+      history.push(routes.home, {
+        message: "Account created.Please Login",
+        username,
+        password,
+      });
+    },
+  });
   const onSubmitValid: SubmitHandler<FormProps> = (data) => {
     if (loading) return;
     createAccount({ variables: { ...data } });
