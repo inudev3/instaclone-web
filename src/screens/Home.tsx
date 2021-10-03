@@ -30,9 +30,9 @@ export default function Home({}) {
   return (
     <div>
       <PageTitle title="Home" />
-      {data?.seeFeed?.map((photo) => (
-        <Photo key={photo?.id} photo={photo} />
-      ))}
+      {data?.seeFeed?.map(
+        (photo) => photo && <Photo key={photo.id} {...photo} />
+      )}
     </div>
   );
 }

@@ -5,31 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fa70d52-95a8-409c-ba1b-8895f2dff7ca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/__generated__/createAccount.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__generated__/globalTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__generated__/login.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__generated__/me.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__generated__/seeFeed.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Avatar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/feed/Photo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useUser.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apollo.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apollo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/apollo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/AuthLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/AuthLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feed/Photo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/feed/Photo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/SingUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SingUp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +85,7 @@
       <workItem from="1633237717751" duration="52000" />
       <workItem from="1633237779675" duration="2821000" />
       <workItem from="1633259234552" duration="15884000" />
-      <workItem from="1633287157928" duration="3463000" />
+      <workItem from="1633287157928" duration="7901000" />
     </task>
     <servers />
   </component>
