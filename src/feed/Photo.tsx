@@ -14,13 +14,18 @@ import { seeFeed, seeFeed_seeFeed } from "../__generated__/seeFeed";
 import { DocumentNode, gql, useMutation } from "@apollo/client";
 import { FEED_QUERY } from "../screens/Home";
 import { toggleLike, toggleLike_toggleLike } from "../__generated__/toggleLike";
+import { BSname } from "../__generated__/BSname";
+
+import { Link } from "react-router-dom";
+import Comment from "./Comment";
+import Comments from "./Comment";
 
 const PhotoContainer = styled.div`
   background-color: white;
   border-radius: 10px;
   border: 1px solid ${(props) => props.theme.borderColor};
   margin-bottom: 20px;
-  max-width: 615px;
+  max-width: 680px;
 `;
 const PhotoHeader = styled.header`
   display: flex;
@@ -31,7 +36,9 @@ const Username = styled(FatText)`
   margin-left: 15px;
 `;
 const PhotoFile = styled.img`
-  min-width: 100%;
+  max-width: 100%;
+
+  object-fit: cover;
   border-color: ${(props) => props.theme.borderColor};
 `;
 const PhotoData = styled.div`
@@ -60,6 +67,23 @@ const PhotoActions = styled.div`
 const Likes = styled(FatText)`
   margin-top: 10px;
   display: block;
+`;
+
+const CommentsContainer = styled.div`
+  margin-top: 15px;
+`;
+const Row = styled.div`
+  align-items: center;
+`;
+const CommentCount = styled.span`
+  opacity: 0.7;
+  margin: 10px 0px;
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+`;
+const CommentsCaption = styled.span`
+  margin-left: 15px;
 `;
 
 const TOGGLE_LIKE_MUTATION = gql`
@@ -91,10 +115,7 @@ export default function Photo({ ...photo }: seeFeed_seeFeed) {
               likes
             }
           `;
-          const result = cache.readFragment<{
-            isLiked: boolean;
-            likes: number;
-          }>({
+          const result = cache.readFragment<BSname>({
             id: fragmentId,
             fragment,
           });
@@ -103,27 +124,29 @@ export default function Photo({ ...photo }: seeFeed_seeFeed) {
             id: fragmentId,
             fragment,
             data: {
-              isLiked: result?.isLiked, //fetch하는게  아니기 때문에 직접 데이터를 변경해서 전달해줘야 한다.
+              isLiked: !result?.isLiked, //fetch하는게  아니기 때문에 직접 데이터를 변경해서 전달해줘야 한다.
               likes: result?.isLiked ? result?.likes - 1 : result?.likes! + 1,
             },
           });
         }
       },
     });
+  const { id, user, isLiked, likes, file, caption, commentNumber, comments } =
+    photo;
   return (
-    <PhotoContainer key={photo?.id}>
+    <PhotoContainer key={id}>
       <PhotoHeader>
-        <Avatar url={photo?.user.avatar} lg={true} />
-        <Username>{photo?.user.username}</Username>
+        <Avatar url={user.avatar} lg={true} />
+        <Username>{user.username}</Username>
       </PhotoHeader>
-      <PhotoFile src={photo?.file} />
+      <PhotoFile src={file} />
       <PhotoData>
         <PhotoActions>
           <div>
             <span onClick={() => toggleLikeMutation()}>
               <FontAwesomeIcon
-                style={{ color: photo?.isLiked ? "tomato" : "inherit" }}
-                icon={photo?.isLiked ? SolidHeart : faHeart}
+                style={{ color: isLiked ? "tomato" : "inherit" }}
+                icon={isLiked ? SolidHeart : faHeart}
                 size={"2x"}
               />
             </span>
@@ -134,7 +157,19 @@ export default function Photo({ ...photo }: seeFeed_seeFeed) {
             <FontAwesomeIcon icon={faBookmark} size={"2x"} />
           </div>
         </PhotoActions>
-        <Likes>{photo?.likes === 1 ? `1 like` : `${photo?.likes} likes`}</Likes>
+        <Likes>{likes === 1 ? `1 like` : `${likes} likes`}</Likes>
+        <CommentsContainer>
+          <Row>
+            <FatText>{user.username}</FatText>
+            <CommentsCaption>{caption}</CommentsCaption>
+          </Row>
+          <CommentCount>
+            {commentNumber == 1 ? "1 comment" : `${commentNumber} comments`}
+          </CommentCount>
+          {comments?.map((comment) => (
+            <Comment {...comment} />
+          ))}
+        </CommentsContainer>
       </PhotoData>
     </PhotoContainer>
   );

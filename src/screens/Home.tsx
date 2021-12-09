@@ -19,6 +19,13 @@ export const FEED_QUERY = gql`
       likes
       commentNumber
       createdAt
+      comments {
+        user {
+          username
+        }
+        payload
+        isMine
+      }
       isMine
       isLiked
     }

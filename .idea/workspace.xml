@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fa70d52-95a8-409c-ba1b-8895f2dff7ca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/feed/Comment.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apollo.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__generated__/BSname.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/__generated__/BSname.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__generated__/seeFeed.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/__generated__/seeFeed.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__generated__/toggleLike.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/__generated__/toggleLike.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/feed/Photo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/feed/Photo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Home.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +42,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="format.on.save" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../instaclone" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -86,6 +93,27 @@
       <workItem from="1633237779675" duration="2821000" />
       <workItem from="1633259234552" duration="15884000" />
       <workItem from="1633287157928" duration="7901000" />
+      <workItem from="1635339854679" duration="781000" />
+      <workItem from="1635408180542" duration="9123000" />
+      <workItem from="1635470484947" duration="601000" />
+      <workItem from="1635481075934" duration="599000" />
+      <workItem from="1635503337437" duration="1364000" />
+      <workItem from="1635576796453" duration="53000" />
+      <workItem from="1635580763547" duration="1789000" />
+      <workItem from="1635597227965" duration="1311000" />
+      <workItem from="1635659592973" duration="1047000" />
+      <workItem from="1635663100940" duration="2850000" />
+      <workItem from="1635676697757" duration="961000" />
+      <workItem from="1636185750406" duration="1210000" />
+      <workItem from="1636983965785" duration="1438000" />
+      <workItem from="1637021149091" duration="427000" />
+      <workItem from="1637038671221" duration="2227000" />
+      <workItem from="1637107656637" duration="1006000" />
+      <workItem from="1637112649076" duration="16000" />
+      <workItem from="1637132348999" duration="63000" />
+      <workItem from="1637632823252" duration="115000" />
+      <workItem from="1637945723522" duration="3435000" />
+      <workItem from="1638534913013" duration="1851000" />
     </task>
     <servers />
   </component>

@@ -10,4 +10,5 @@
 export interface BSname {
   __typename: "Photo";
   isLiked: boolean;
+  likes: number;
 }

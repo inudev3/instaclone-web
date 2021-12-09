@@ -8,7 +8,7 @@
 // ====================================================
 
 export interface toggleLike_toggleLike {
-  __typename: "MutationResponse";
+  __typename: "toggleLikeResult";
   ok: boolean;
   error: string | null;
 }
